@@ -883,14 +883,3 @@ if ('PerformanceObserver' in window) {
 }
 
 // Cumulative Layout Shift
-if ('PerformanceObserver' in window) {
-  new PerformanceObserver(list => {
-    list.getEntries().forEach(entry => {
-      console.log('CLS:', entry.value);
-    });
-  }).observe({ entryTypes: ['layout-shift'] });
-}
-
-// Web Vitals polyfill would go here for older browsers
-
-// End of additional features
