@@ -872,14 +872,3 @@ if ('PerformanceObserver' in window) {
     });
   }).observe({ entryTypes: ['largest-contentful-paint'] });
 }
-
-// First Input Delay
-if ('PerformanceObserver' in window) {
-  new PerformanceObserver(list => {
-    list.getEntries().forEach(entry => {
-      console.log('FID:', entry.processingStart - entry.startTime);
-    });
-  }).observe({ entryTypes: ['first-input'] });
-}
-
-// Cumulative Layout Shift
