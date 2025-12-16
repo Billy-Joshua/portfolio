@@ -864,11 +864,3 @@ if ('LayoutShift' in window) {
   }).observe({ entryTypes: ['layout-shift'] });
 }
 
-// Largest Contentful Paint
-if ('PerformanceObserver' in window) {
-  new PerformanceObserver(list => {
-    list.getEntries().forEach(entry => {
-      console.log('LCP:', entry.startTime);
-    });
-  }).observe({ entryTypes: ['largest-contentful-paint'] });
-}
