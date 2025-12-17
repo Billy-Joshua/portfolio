@@ -841,16 +841,3 @@ const resizeObserver = new ResizeObserver(entries => {
 document.querySelectorAll('.observe-resize').forEach(el => {
   resizeObserver.observe(el);
 });
-
-// Performance Observer
-if ('PerformanceObserver' in window) {
-  const observer = new PerformanceObserver(list => {
-    list.getEntries().forEach(entry => {
-      console.log('Performance entry:', entry);
-    });
-  });
-
-  observer.observe({ entryTypes: ['measure'] });
-}
-
-
