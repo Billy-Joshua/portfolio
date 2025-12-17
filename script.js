@@ -830,14 +830,3 @@ if ('xr' in navigator) {
 // fetch('module.wasm').then(response => response.arrayBuffer()).then(bytes => WebAssembly.instantiate(bytes)).then(results => { console.log(results.instance); });
 
 // Intersection Observer for lazy loading (already have one above)
-
-// Resize Observer
-const resizeObserver = new ResizeObserver(entries => {
-  entries.forEach(entry => {
-    console.log('Element resized:', entry.contentRect);
-  });
-});
-
-document.querySelectorAll('.observe-resize').forEach(el => {
-  resizeObserver.observe(el);
-});
