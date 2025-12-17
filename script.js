@@ -853,14 +853,4 @@ if ('PerformanceObserver' in window) {
   observer.observe({ entryTypes: ['measure'] });
 }
 
-// Layout Instability API
-if ('LayoutShift' in window) {
-  new PerformanceObserver(list => {
-    list.getEntries().forEach(entry => {
-      if (!entry.hadRecentInput) {
-        console.log('Layout shift:', entry.value);
-      }
-    });
-  }).observe({ entryTypes: ['layout-shift'] });
-}
 
