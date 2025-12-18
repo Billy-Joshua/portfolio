@@ -816,17 +816,3 @@ if (gl2Canvas) {
     gl.clear(gl.COLOR_BUFFER_BIT);
   }
 }
-
-// WebVR/WebXR
-if ('xr' in navigator) {
-  navigator.xr.isSessionSupported('immersive-vr').then(supported => {
-    if (supported) {
-      console.log('WebXR VR supported');
-    }
-  });
-}
-
-// WebAssembly demo (would require a .wasm file)
-// fetch('module.wasm').then(response => response.arrayBuffer()).then(bytes => WebAssembly.instantiate(bytes)).then(results => { console.log(results.instance); });
-
-// Intersection Observer for lazy loading (already have one above)
