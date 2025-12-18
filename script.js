@@ -795,16 +795,4 @@ if ('requestMIDIAccess' in navigator) {
 }
 
 // Web Audio API demo
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const oscillator = audioCtx.createOscillator();
-const gainNode = audioCtx.createGain();
 
-oscillator.connect(gainNode);
-gainNode.connect(audioCtx.destination);
-
-oscillator.frequency.setValueAtTime(440, audioCtx.currentTime);
-oscillator.type = 'sine';
-
-// To play: oscillator.start(); oscillator.stop(audioCtx.currentTime + 1);
-
-// WebGL 2.0 demo
