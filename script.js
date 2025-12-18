@@ -787,12 +787,5 @@ if (wakeLockBtn) {
 }
 
 // Web MIDI API
-if ('requestMIDIAccess' in navigator) {
-  navigator.requestMIDIAccess().then(access => {
-    console.log('MIDI access granted');
-    // Use access.inputs and access.outputs
-  });
-}
 
-// Web Audio API demo
 
