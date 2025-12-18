@@ -808,11 +808,3 @@ oscillator.type = 'sine';
 // To play: oscillator.start(); oscillator.stop(audioCtx.currentTime + 1);
 
 // WebGL 2.0 demo
-const gl2Canvas = document.querySelector('#webgl2-canvas');
-if (gl2Canvas) {
-  const gl = gl2Canvas.getContext('webgl2');
-  if (gl) {
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  }
-}
