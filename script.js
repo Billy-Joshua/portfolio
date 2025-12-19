@@ -684,19 +684,3 @@ if ('Magnetometer' in window) {
 }
 
 // Web Share API
-const shareBtn = document.querySelector('#share-btn');
-if (shareBtn) {
-  shareBtn.addEventListener('click', async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: 'My Portfolio',
-          text: 'Check out my awesome portfolio!',
-          url: window.location.href
-        });
-      } catch (err) {
-        console.log('Error sharing:', err);
-      }
-    } else {
-      // Fallback: copy URL to clipboard
-
