@@ -755,19 +755,4 @@ if (authBtn) {
 }
 
 // Picture-in-Picture API
-const pipBtn = document.querySelector('#pip-btn');
-if (pipBtn) {
-  pipBtn.addEventListener('click', async () => {
-    const video = document.querySelector('video');
-    if (video && document.pictureInPictureEnabled) {
-      try {
-        await video.requestPictureInPicture();
-      } catch (err) {
-        console.log('Error:', err);
-      }
-    }
-  });
-}
-
-// Screen Wake Lock API
 
