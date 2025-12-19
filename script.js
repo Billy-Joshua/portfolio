@@ -675,12 +675,3 @@ if ('Gyroscope' in window) {
 }
 
 // Magnetometer
-if ('Magnetometer' in window) {
-  const sensor = new Magnetometer({ frequency: 60 });
-  sensor.addEventListener('reading', () => {
-    console.log('Magnetic field:', sensor.x, sensor.y, sensor.z);
-  });
-  sensor.start();
-}
-
-// Web Share API
