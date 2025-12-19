@@ -657,12 +657,3 @@ if ('ProximitySensor' in window) {
 }
 
 // Accelerometer
-if ('Accelerometer' in window) {
-  const sensor = new Accelerometer({ frequency: 60 });
-  sensor.addEventListener('reading', () => {
-    console.log('Acceleration:', sensor.x, sensor.y, sensor.z);
-  });
-  sensor.start();
-}
-
-// Gyroscope
