@@ -706,27 +706,3 @@ if (shareBtn) {
 }
 
 // Web Payments API (basic setup)
-const paymentBtn = document.querySelector('#payment-btn');
-if (paymentBtn) {
-  paymentBtn.addEventListener('click', () => {
-    if ('PaymentRequest' in window) {
-      const paymentRequest = new PaymentRequest(
-        [{ supportedMethods: 'basic-card' }],
-        {
-          total: {
-            label: 'Total',
-            amount: { currency: 'USD', value: '10.00' }
-          }
-        }
-      );
-
-      paymentRequest.show().then(paymentResponse => {
-        // Process payment
-        paymentResponse.complete('success');
-      });
-    }
-  });
-}
-
-// Web Authentication API (WebAuthn)
-
