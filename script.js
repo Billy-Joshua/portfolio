@@ -770,22 +770,4 @@ if (pipBtn) {
 }
 
 // Screen Wake Lock API
-const wakeLockBtn = document.querySelector('#wake-lock-btn');
-if (wakeLockBtn) {
-  let wakeLock = null;
-
-  wakeLockBtn.addEventListener('click', async () => {
-    if ('wakeLock' in navigator) {
-      try {
-        wakeLock = await navigator.wakeLock.request('screen');
-        console.log('Wake lock active');
-      } catch (err) {
-        console.log('Error:', err);
-      }
-    }
-  });
-}
-
-// Web MIDI API
-
 
