@@ -729,30 +729,4 @@ if (paymentBtn) {
 }
 
 // Web Authentication API (WebAuthn)
-const authBtn = document.querySelector('#auth-btn');
-if (authBtn) {
-  authBtn.addEventListener('click', async () => {
-    if ('credentials' in navigator) {
-      try {
-        const credential = await navigator.credentials.create({
-          publicKey: {
-            challenge: new Uint8Array(32),
-            rp: { name: 'Portfolio' },
-            user: {
-              id: new Uint8Array(16),
-              name: 'user@example.com',
-              displayName: 'User'
-            },
-            pubKeyCredParams: [{ alg: -7, type: 'public-key' }]
-          }
-        });
-        console.log('Credential created:', credential);
-      } catch (err) {
-        console.log('Error:', err);
-      }
-    }
-  });
-}
-
-// Picture-in-Picture API
 
