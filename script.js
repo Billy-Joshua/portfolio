@@ -666,12 +666,3 @@ if ('Accelerometer' in window) {
 }
 
 // Gyroscope
-if ('Gyroscope' in window) {
-  const sensor = new Gyroscope({ frequency: 60 });
-  sensor.addEventListener('reading', () => {
-    console.log('Gyroscope:', sensor.x, sensor.y, sensor.z);
-  });
-  sensor.start();
-}
-
-// Magnetometer
