@@ -639,12 +639,4 @@ window.addEventListener('deviceorientation', (e) => {
 });
 
 // Ambient Light Sensor
-if ('AmbientLightSensor' in window) {
-  const sensor = new AmbientLightSensor();
-  sensor.addEventListener('reading', () => {
-    console.log('Ambient light:', sensor.illuminance);
-  });
-  sensor.start();
-}
 
-// Proximity Sensor
