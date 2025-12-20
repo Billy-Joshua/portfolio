@@ -617,13 +617,6 @@ if ('performance' in window) {
 }
 
 // Battery API
-if ('getBattery' in navigator) {
-  navigator.getBattery().then(battery => {
-    console.log('Battery level:', battery.level * 100 + '%');
-  });
-}
-
-// Vibration API
 
 
 
