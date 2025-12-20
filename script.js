@@ -634,9 +634,5 @@ if (vibrateBtn) {
 }
 
 // Device orientation
-window.addEventListener('deviceorientation', (e) => {
-  // Use e.alpha, e.beta, e.gamma for device orientation
-});
 
-// Ambient Light Sensor
 
