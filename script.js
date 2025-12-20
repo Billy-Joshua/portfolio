@@ -609,14 +609,7 @@ const observer = new MutationObserver((mutations) => {
 observer.observe(document.body, { childList: true, subtree: true });
 
 // Performance monitoring
-if ('performance' in window) {
-  window.addEventListener('load', () => {
-    const perfData = performance.getEntriesByType('navigation')[0];
-    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart);
-  });
-}
 
-// Battery API
 
 
 
