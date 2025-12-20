@@ -648,12 +648,3 @@ if ('AmbientLightSensor' in window) {
 }
 
 // Proximity Sensor
-if ('ProximitySensor' in window) {
-  const sensor = new ProximitySensor();
-  sensor.addEventListener('reading', () => {
-    console.log('Proximity:', sensor.distance);
-  });
-  sensor.start();
-}
-
-// Accelerometer
