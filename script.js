@@ -624,15 +624,6 @@ if ('getBattery' in navigator) {
 }
 
 // Vibration API
-const vibrateBtn = document.querySelector('#vibrate-btn');
-if (vibrateBtn) {
-  vibrateBtn.addEventListener('click', () => {
-    if ('vibrate' in navigator) {
-      navigator.vibrate(200);
-    }
-  });
-}
 
-// Device orientation
 
 
