@@ -600,16 +600,5 @@ function applyStyles(element, styles) {
 // applyStyles(el, { color: 'blue', fontSize: '20px' });
 
 // Mutation Observer
-const observer = new MutationObserver((mutations) => {
-  mutations.forEach((mutation) => {
-    console.log('DOM changed');
-  });
-});
-
-observer.observe(document.body, { childList: true, subtree: true });
-
-// Performance monitoring
-
-
 
 
